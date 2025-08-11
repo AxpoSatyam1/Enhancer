@@ -9,6 +9,7 @@ def handler(event):
     """
     RunPod handler for CodeFormer with Base64 input and output.
     Expects:
+    
         event['input']['image'] → Base64 string of the input image
     Returns:
         { "output_image": "<Base64 of processed image>" }
