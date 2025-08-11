@@ -25,7 +25,6 @@ COPY handler.py .
 RUN pip install --no-cache-dir \
     addict \
     future \
-    lmdb \
     numpy \
     opencv-python \
     Pillow \
