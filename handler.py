@@ -23,7 +23,7 @@ def handler(event):
 
     # 2️⃣ Decode Base64 → Temp file
     image_data = base64.b64decode(image_b64)
-    if isinstance(image, (bytes, bytearray)):
+    if isinstance(image_data, (bytes, bytearray)):
         image_data = np.frombuffer(image_data, np.uint8)
 
 
