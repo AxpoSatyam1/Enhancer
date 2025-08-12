@@ -22,25 +22,9 @@ WORKDIR /app
 COPY handler.py .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir \
-    addict \
-    future \
-    numpy \
-    opencv-python \
-    Pillow \
-    pyyaml \
-    requests \
-    scikit-image\
-    scipy \
-    tb-nightly \
-    torch>=1.7.1\
-    torchvision\
-    tqdm \
-    yapf \
-    lpips \
-    gdown \
+RUN pip install --no-cache-dir addict future numpy opencv-python Pillow pyyaml requests scikit-image scipy tb-nightly \
+    torch>=1.7.1 torchvision tqdm yapf lpips gdown
 
-# Volume for caching models
 VOLUME ["/runpod-volume"]
 
 # Run handler
