@@ -36,12 +36,7 @@ def handler(event):
         codeformer_fidelity=0.9
     )
 
-    # 4️⃣ Extract output path
-    output_path = None
-    if isinstance(result, dict):
-        output_path = result.get("output")
-    elif isinstance(result, str):
-        output_path = result
+    # 4️⃣ Extract outpu
 
     # if not output_path or not os.path.exists(output_path):
     #     return {"error": "No valid output from CodeFormer"}
@@ -54,7 +49,7 @@ def handler(event):
     
 
     # 7️⃣ Return Base64 output
-    return {"output_image": output_path}
+    return {"output_image": result}
 
 
 # 🚀 Start RunPod serverless
