@@ -32,8 +32,8 @@ def handler(event):
         image=image_data,
         background_enhance=True,
         face_upsample=True,
-        upscale=8,
-        codeformer_fidelity=0.9
+        upscale=4,
+        codeformer_fidelity=0.0
     )
 
     # 4️⃣ Extract outpu
